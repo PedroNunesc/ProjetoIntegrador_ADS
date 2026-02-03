@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-image: url('../assets/login-cadastro.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 0 40px 0;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 30px;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.user-initial {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #1f3c88;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  user-select: none;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo {
+  height: 60px;
+  width: auto;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0,0,0,0.04);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.user-avatar:hover {
+  transform: scale(1.05);
+}
+
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 620px;
+  padding: 28px;
+  border-radius: 16px;
+  margin-top: 40px;
+  border: 2px solid #1f3c88;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.card-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.back-arrow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #000000;
+  transition: transform 200ms ease;
+}
+
+.back-arrow:hover {
+  transform: translateX(-4px);
+}
+
+.title {
+  color: #1f3c88;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.field label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #1f3c88;
+}
+
+.field input,
+.field select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #1f3c88;
+  font-size: 14px;
+}
+
+.btn-create {
+  width: 100%;
+  padding: 12px;
+  background: #1f3c88;
+  border: 2px solid #1f3c88;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-create:hover {
+  background: #17306d;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: none;
+    width: calc(100% - 32px);
+    padding: 18px;
+    border-radius: 16px;
+    margin-top: 24px;
+  }
+
+  .field input,
+  .field select {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .btn-create {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .user-avatar {
+    width: 50px;
+    height: 50px;
+  }
+}
