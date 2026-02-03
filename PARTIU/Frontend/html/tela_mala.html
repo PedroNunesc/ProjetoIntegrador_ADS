@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PARTIU! - Minhas Viagens</title>
+  <link rel="stylesheet" href="../css/tela_mala.css" />
+  <script src="../js/tela_mala.js" defer></script>
+  <script src="../js/header.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+  <div class="header-left">
+    <a href="homepage.html" class="logo-link">
+      <img src="../assets/logo-partiu.png" class="header-logo" alt="Logo PARTIU">
+    </a>
+    <div class="logo-text">PARTIU</div>
+  </div>
+
+  <div class="header-right">
+    <a href="tela_p_usuario.html" class="avatar-link" aria-label="Conta do usuário">
+      <div class="user-initial" id="user-initial">?</div>
+    </a>
+  </div>
+</header>
+
+
+  <div class="container">
+    <a href="homepage.html" class="back-arrow">←</a>
+    <h2 class="title">Minhas Viagens</h2>
+
+    <button class="btn-primary" onclick="window.location.href='create_trip.html'">
+      Criar nova viagem
+    </button>
+
+    <section class="list" id="trip-list">
+    </section>
+  </div>
+
+</body>
+</html>
