@@ -1,3 +1,10 @@
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const METEOSTAT_API_KEY = process.env.METEOSTAT_API_KEY;
+const OPENWEATHER_KEY = process.env.OPENWEATHER_KEY;
+
 interface GeoResponse {
   lat: number;
   lon: number;
@@ -22,7 +29,7 @@ interface HistoricalAverageResult {
 const historicalCache: Record<string, MeteostatDaily[]> = {};
 
 async function getCityCoordinates(city: string, country: string): Promise<GeoResponse | null> {
-  const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(city)},${encodeURIComponent(country)}&limit=1&appid=${OPENWEATHER_API_KEY}`;
+  const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(city)},${encodeURIComponent(country)}&limit=1&appid=${OPENWEATHER_KEY}`;
 
   try {
     const geoRes = await fetch(geoUrl);
@@ -72,7 +79,7 @@ async function getHistoricalAverageForDay(lat: number, lon: number, month: numbe
         method: 'GET',
         headers: {
           'x-rapidapi-host': 'meteostat.p.rapidapi.com',
-          'x-rapidapi-key': METEOSTAT_API_KEY,
+          'x-rapidapi-key': METEOSTAT_API_KEY!,
         },
       });
       if (!res.ok) continue;
@@ -146,5 +153,4 @@ export async function getHistoricalAverageForInterval(
   const tempAvg = validDays.reduce((sum, d) => sum + (d.temp_avg ?? 0), 0) / validDays.length;
 
   return { temp_avg: tempAvg };
-
 }
