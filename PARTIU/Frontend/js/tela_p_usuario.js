@@ -86,7 +86,7 @@ saveBtn.addEventListener("click", async () => {
 
 logoutBtn.addEventListener("click", () => {
   localStorage.clear();
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 });
 
 
@@ -100,7 +100,7 @@ deleteBtn.addEventListener("click", async () => {
     });
 
     localStorage.clear();
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 
   } catch (err) {
     console.error(err);
