@@ -1,6 +1,3 @@
-const OPENWEATHER_API_KEY = '9937e69d524ede9dc35a077528e4e15d';
-const METEOSTAT_API_KEY = '8d2fdfb836msh07acb12a0b5262bp12b12ajsnf1239ae9534b';
-
 interface GeoResponse {
   lat: number;
   lon: number;
@@ -149,4 +146,5 @@ export async function getHistoricalAverageForInterval(
   const tempAvg = validDays.reduce((sum, d) => sum + (d.temp_avg ?? 0), 0) / validDays.length;
 
   return { temp_avg: tempAvg };
+
 }
