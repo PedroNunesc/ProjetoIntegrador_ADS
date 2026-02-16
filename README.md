@@ -27,6 +27,9 @@ Criação e controle das viagens associadas ao usuário.
 ### Gerenciamento de Itens
 Sistema de CRUD para itens de bagagem.
 
+### Segurança
+Hash de senhas para usuários e Autenticação via JWT (JSON Web Token)
+
 
 ## 📄 Artigo
 O desenvolvimento do projeto, sua metodologia e resultados foram documentados em um artigo acadêmico produzido pelo grupo.
@@ -114,4 +117,5 @@ Projeto desenvolvido em grupo por:
 
 Pedro Nunes
 - 🔗 LinkedIn: http://www.linkedin.com/in/pedro-nunes-hc
+
 - 🔗 Github: https://github.com/PedroNunesc
