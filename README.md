@@ -119,3 +119,6 @@ Pedro Nunes
 - 🔗 LinkedIn: http://www.linkedin.com/in/pedro-nunes-hc
 
 - 🔗 Github: https://github.com/PedroNunesc
+
+- 🔗 Gmail: pnunescarlos@gmail.com
+
