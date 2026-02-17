@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/tela_p_usuario.css" />
+  <title>PARTIU! Editar Perfil</title>
+  <script src="../js/tela_p_usuario.js" defer></script>
+      <script src="../js/header.js" defer></script>
+
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-left">
+    <a href="homepage.html" class="logo-link">
+      <img src="../assets/logo-partiu.png" alt="PARTIU" class="header-logo">
+    </a>
+    <div class="logo-text">PARTIU</div>
+  </div>
+</header>
+
+<div class="card">
+  <a href="homepage.html" class="back-arrow">←</a>
+
+  <div class="profile-pic-container">
+  <div class="profile-initial-circle" id="profile-initial">?</div>
+</div>
+
+  <div class="input-group">
+    <label>Alterar nome</label>
+    <input type="text" id="usernameInput" />
+  </div>
+
+  <div class="input-group">
+    <label>Alterar e-mail</label>
+    <input type="email" id="emailInput" />
+  </div>
+
+  <div class="input-group">
+    <label>Alterar senha</label>
+    <input type="password" id="passwordInput" />
+  </div>
+
+  <div class="input-group">
+    <label>Senha atual</label>
+    <input type="password" id="currentPasswordInput" />
+    <small id="passwordWarning"></small>
+  </div>
+
+  <button class="btn btn-save">Salvar alterações</button>
+  <button class="btn btn-logout">Sair da conta</button>
+  <button class="btn btn-delete-account">Apagar conta</button>
+</div>
+
+</body>
+</html>
